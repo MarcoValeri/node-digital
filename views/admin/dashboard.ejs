@@ -2,6 +2,15 @@
     <title><%= pageTitle %></title>
 </head>
 <body>
-    <h1>dashboard</h1>
+    <div class="admin-dashboard">
+        <div class="admin-dashboard__grid">
+            <div class="admin-dashboard__container-menu">
+                <%- include('./../includes/admin-menu.ejs'); %>
+            </div>
+            <div class="admin-dashboard__container-content">
+                <h2>Admin Content</h2>
+            </div>
+        </div>
+    </div>
 
 <%- include('./../includes/footer.ejs'); %>
