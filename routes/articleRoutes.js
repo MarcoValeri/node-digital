@@ -4,8 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers
-const adminController = require('../controllers/adminController');
+const articleControllers = require('../controllers/articleController');
 
-router.use('/admin/dashboard', adminController.adminDashboard);
+router.use('/articles/:url', articleControllers.article);
 
 module.exports = router;
