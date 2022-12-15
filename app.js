@@ -7,7 +7,7 @@ const app = express();
 const adminRoutes = require('./routes/adminRoutes');
 
 // Static Files
-app.set(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static('images'));
 
 // View
