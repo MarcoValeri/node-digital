@@ -23,7 +23,8 @@ module.exports = class Article {
         })
     }
 
-    async showArticle(url) {
+    showArticle(url) {
+
         const sqlQuery = `SELECT * FROM articles WHERE url='${url}'`;
 
         const connectionDb = mysql.createConnection({
@@ -33,7 +34,7 @@ module.exports = class Article {
             database: 'node_digital'
         });
 
-        await connectionDb.connect(err => {
+        connectionDb.connect(err => {
             if (err) throw err;
             console.log(`Connected to the db...`);
 
