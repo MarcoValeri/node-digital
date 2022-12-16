@@ -23,7 +23,9 @@ module.exports = class Article {
         })
     }
 
-    showArticle(url) {
+    async showArticle(url) {
+
+        let output = ['empty'];
 
         const sqlQuery = `SELECT * FROM articles WHERE url='${url}'`;
 
@@ -34,16 +36,20 @@ module.exports = class Article {
             database: 'node_digital'
         });
 
-        connectionDb.connect(err => {
+        await connectionDb.connect(err => {
             if (err) throw err;
             console.log(`Connected to the db...`);
 
             connectionDb.query(sqlQuery, (err, result) => {
                 if (err) throw err;
-                // console.log(JSON.stringify(result));
-                return result;
+                console.log(JSON.stringify(result));
+                // console.log(`Result: ${result}`);
+                // return result;
+                output = ['It is no empty'];
             })
         })
+
+        return output;
 
     }
 
