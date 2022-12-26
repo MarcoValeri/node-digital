@@ -4,4 +4,10 @@
 <body>
     <%- include('./../includes/header.ejs'); %>
 
+    <div>
+        <% for (let article in articleData) { %>
+            <h1><%= article %></h1>
+        <% } %>
+    </div>
+
 <%- include('./../includes/footer.ejs'); %>

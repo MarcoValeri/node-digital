@@ -3,6 +3,17 @@ const path = require('path');
 
 const app = express();
 
+// DB TEST DELETE IT START
+
+// const db = require('./util/database');
+// db.execute('SELECT * FROM articles')
+//     .then(row => {
+//         console.log(row);
+//     })
+//     .catch(err => console.log(err));
+
+// DB TEST DELETE IT END
+
 // Routes
 const adminRoutes = require('./routes/adminRoutes');
 const articleRoutes = require('./routes/articleRoutes');

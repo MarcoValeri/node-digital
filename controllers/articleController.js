@@ -5,11 +5,20 @@ exports.getArticle = (req, res, next) => {
     // Save url into a variable
     const url = req.params.url;
     
-    Article.fetchAll((articles) => {
-        console.log(articles);
-        res.render('./articles/article', {
-            pageTitle: url,
-            articleData: articles
-        });
-    });
+    // Article.fetchAll((articles) => {
+    //     console.log(articles);
+    //     res.render('./articles/article', {
+    //         pageTitle: url,
+    //         articleData: articles
+    //     });
+    // });
+
+    Article.fetchAll()
+        .then(articles => {
+            res.render('./articles/article', {
+                pageTitle: url,
+                articleData: articles
+            });
+        })
+        .catch(err => console.log(err));
 }
