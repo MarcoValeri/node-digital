@@ -6,4 +6,8 @@ module.exports = class Article {
         return db.execute('SELECT * FROM articles');
     }
 
+    static findByUrl(url) {
+        return db.execute(`SELECT * FROM articles WHERE url = ?`, [url]);
+    }
+
 }
