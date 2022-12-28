@@ -27,6 +27,9 @@ html {
   color: #000;
   text-decoration: none; }
 
+.admin-menu__container-single {
+  padding: 2rem 0; }
+
 .header {
   height: 30vh; }
   .header__container-content {
@@ -45,15 +48,25 @@ html {
 .admin-dashboard__grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-areas: "admin-main__container-menu admin-main__container-content";
-  border: 1px solid #f00; }
+  grid-template-areas: "admin-main__container-menu admin-main__container-content"; }
 
 .admin-dashboard__container-menu {
   grid-area: admin-main__container-menu;
   padding: 2rem;
-  border: 1px solid #00f; }
+  border: 1px solid #000; }
 
 .admin-dashboard__container-content {
   grid-area: admin-main__container-content;
-  padding: 2rem;
-  border: 1px solid #00f; }
+  padding: 10rem 2rem 10rem 2rem;
+  border: 1px solid #000; }
+
+.admin-dashboard__container-articles {
+  margin-bottom: 2rem;
+  border: 1px solid #f00; }
+
+.admin-dashboard__table-articles {
+  border-collapse: collapse; }
+  .admin-dashboard__table-articles td, .admin-dashboard__table-articles th {
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #000; }

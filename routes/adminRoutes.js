@@ -7,5 +7,7 @@ const router = express.Router();
 const adminController = require('../controllers/adminController');
 
 router.use('/admin/dashboard', adminController.adminDashboard);
+router.use('/admin/articles', adminController.adminArticles);
+router.use('/admin/add-new-article', adminController.adminNewArticle);
 
 module.exports = router;
