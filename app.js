@@ -1,18 +1,8 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
 
 const app = express();
-
-// DB TEST DELETE IT START
-
-// const db = require('./util/database');
-// db.execute('SELECT * FROM articles')
-//     .then(row => {
-//         console.log(row);
-//     })
-//     .catch(err => console.log(err));
-
-// DB TEST DELETE IT END
 
 // Routes
 const adminRoutes = require('./routes/adminRoutes');
@@ -27,6 +17,10 @@ app.use('/images', express.static('images'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+// Body Parser
+app.use(bodyParser.urlencoded({extended: false}));
+
+// Routers
 app.use(adminRoutes);
 app.use(articleRoutes);
 app.use(homeRoutes);
