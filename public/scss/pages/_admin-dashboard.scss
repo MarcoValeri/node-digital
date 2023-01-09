@@ -1,0 +1,59 @@
+.admin-dashboard {
+    background-color: $black;
+    color: $white;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+        "admin-main__container-menu admin-main__container-content";
+    }
+
+    &__container-menu {
+        grid-area: admin-main__container-menu;
+        min-height: 100vh;
+        padding: 2rem;
+        border: 1px solid $white;
+    }
+
+    &__container-content {
+        grid-area: admin-main__container-content;
+        padding: 2rem 2rem 10rem 2rem;
+    }
+
+    // Articles
+    &__container-articles {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__table-articles {
+        border-collapse: collapse;
+
+        td, th {
+            text-align: left;
+            padding: 1.5rem;
+            border: 1px solid $white;
+        }
+    }
+
+    // Images
+    &__container-images {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__table-images {
+        border-collapse: collapse;
+
+        td, th {
+            text-align: left;
+            padding: 1.5rem;
+            border: 1px solid $white;
+        }
+    }
+
+    &__table-single-image {
+        width: 5rem;
+    }
+}
