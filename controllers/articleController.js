@@ -17,7 +17,7 @@ exports.getArticle = (req, res, next) => {
                         articleDescription: rows[index].description,
                         articleContent: rows[index].content,
                         articleImgeUrl: rows[index].imageUrl
-                    })
+                    });
                 }
             }
 
@@ -29,4 +29,10 @@ exports.getArticle = (req, res, next) => {
             }
         })
         .catch(err => console.log(err));
+}
+
+exports.getAllArticles = (req, res, next) => {
+    res.render('./articles/articles', {
+        pageTitle: 'All Articles'
+    });
 }

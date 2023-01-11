@@ -104,6 +104,7 @@ html {
   padding: 5rem;
   background-color: #123456; }
   .footer__container-credits {
+    text-align: center;
     color: #fff; }
   .footer__heart {
     font-size: 2.5rem;
@@ -128,6 +129,17 @@ html {
     color: #fff; }
   .header__sub-title {
     color: #fff; }
+
+.main {
+  display: grid;
+  grid-column: 3fr 1fr;
+  grid-template-areas: "main__content main__sidebar"; }
+  .main__content {
+    grid-area: main__content;
+    border: 1px solid #f00; }
+  .main__sidebar {
+    grid-area: main__sidebar;
+    border: 1px solid #f00; }
 
 .navigation {
   display: flex;

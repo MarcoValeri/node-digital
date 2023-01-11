@@ -1,0 +1,18 @@
+.main {
+    display: grid;
+    grid-column: 3fr 1fr;
+    grid-template-areas:
+    "main__content main__sidebar";
+
+    &__content {
+        grid-area: main__content;
+        border: 1px solid #f00;
+    }
+
+    &__sidebar {
+        grid-area: main__sidebar;
+        border: 1px solid #f00;
+        border-radius: 5px;
+    }
+}
+
