@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 2rem;
     background-color: $blue;
-    border: 1px solid #000;
+    border-bottom: 1px solid $white;
 
     @include respond(md) {
         display: block;

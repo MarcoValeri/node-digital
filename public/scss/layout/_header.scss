@@ -1,8 +1,31 @@
 .header {
-    height: 30vh;
+    height: 60vh;
+    background-color: $blue;
+    font-family: 'Playfair Display', serif;
+
+    @include respond(md) {
+        height: 80vh;
+    }
 
     &__container-content {
         text-align: center;
+    }
+
+    &__content {
+        width: 50%;
+        margin: 5rem auto;
+
+        @include respond(md) {
+            width: 80%;
+        }
+    }
+
+    &__title {
+        color: $white;
+    }
+
+    &__sub-title {
+        color: $white;
     }
 
 }

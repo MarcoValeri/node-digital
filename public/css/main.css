@@ -10,6 +10,7 @@
 *
 * This project follow the logic of responsive-design
 */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   padding: 0;
   margin: 0; }
@@ -17,6 +18,12 @@
 html {
   font-size: 62.5%; }
 
+/**
+* Google Font
+* Name: Playfair Display
+* Url: https://fonts.google.com/specimen/Playfair+Display
+* font-family: 'Playfair Display', serif;
+*/
 .button {
   font-size: 1.6rem;
   text-decoration: none;
@@ -86,9 +93,24 @@ html {
   padding: 2rem 0; }
 
 .header {
-  height: 30vh; }
+  height: 60vh;
+  background-color: #123456;
+  font-family: 'Playfair Display', serif; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      height: 80vh; } }
   .header__container-content {
     text-align: center; }
+  .header__content {
+    width: 50%;
+    margin: 5rem auto; }
+    @media only screen and (max-width: 767px) {
+      .header__content {
+        width: 80%; } }
+  .header__title {
+    color: #fff; }
+  .header__sub-title {
+    color: #fff; }
 
 .navigation {
   display: flex;
@@ -96,7 +118,7 @@ html {
   justify-content: space-between;
   padding: 2rem;
   background-color: #123456;
-  border: 1px solid #000; }
+  border-bottom: 1px solid #fff; }
   @media only screen and (max-width: 767px) {
     .navigation {
       display: block; } }
