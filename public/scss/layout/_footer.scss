@@ -1,0 +1,18 @@
+.footer {
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    padding: 5rem;
+    background-color: $blue;
+
+    &__container-credits {
+        color: $white;
+    }
+
+    &__heart {
+        font-size: 2.5rem;
+        color: #d00;
+    }
+}
