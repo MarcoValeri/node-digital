@@ -5,7 +5,32 @@
     <%- include('./../includes/header.ejs'); %>
 <main class="main">
     <section class="main__content">
-        <h1>content</h1>
+        <div class="articles">
+            <div class="articles__container-title">
+                <h2 class="h2">All articles</h2>
+            </div>
+            <div class="articles__container-articles">
+                <% for (let index = 0; index < getAllArticles.length; index++) { %>
+                <div class="card-preview-article">
+                    <div class="card-preview-article__container-image">
+                        <img class="card-preview-article__image" src="" alt="">
+                    </div>
+                    <div class="card-preview-article__container-data">
+                        <ul>
+                            <li>Published: 23/23/1984</li>
+                            <li>Update: 23/23/1984</li>
+                        </ul>
+                    </div>
+                    <div class="card-preview-article__container-title">
+                        <h2 class="card-preview-article__title"><%= getAllArticles[index].title %></h2>
+                    </div>
+                    <div class="card-preview-article__container-excerpt">
+                        <h4 class="card-preview-article__excerpt"></h4>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
     </section>
     <section class="main__sidebar">
         <h1>sidebar</h1>

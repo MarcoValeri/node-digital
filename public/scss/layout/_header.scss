@@ -2,6 +2,7 @@
     height: 60vh;
     background-color: $blue;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 5rem;
 
     @include respond(md) {
         height: 80vh;

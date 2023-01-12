@@ -95,6 +95,9 @@ html {
 .admin-menu__container-single {
   padding: 2rem 0; }
 
+.card-preview-article {
+  border: 1px solid #00d; }
+
 .footer {
   height: 30vh;
   display: flex;
@@ -113,7 +116,8 @@ html {
 .header {
   height: 60vh;
   background-color: #123456;
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 5rem; }
   @media only screen and (max-width: 767px) {
     .header {
       height: 80vh; } }
@@ -132,14 +136,14 @@ html {
 
 .main {
   display: grid;
-  grid-column: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas: "main__content main__sidebar"; }
   .main__content {
     grid-area: main__content;
-    border: 1px solid #f00; }
+    border: 1px solid #000; }
   .main__sidebar {
     grid-area: main__sidebar;
-    border: 1px solid #f00; }
+    border: 1px solid #000; }
 
 .navigation {
   display: flex;
@@ -365,6 +369,13 @@ html {
       border: 1px solid #fff; }
   .admin-dashboard__table-single-image {
     width: 5rem; }
+
+.articles__container-title {
+  text-align: center;
+  border: 1px solid #f00; }
+
+.articles__container-articles {
+  border: 1px solid #d00; }
 
 .delete-article__title {
   margin-bottom: 2rem; }

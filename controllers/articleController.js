@@ -32,7 +32,12 @@ exports.getArticle = (req, res, next) => {
 }
 
 exports.getAllArticles = (req, res, next) => {
-    res.render('./articles/articles', {
-        pageTitle: 'All Articles'
-    });
+    Article.fetchAll()
+        .then(([rows, fields]) => {
+            res.render('./articles/articles', {
+                pageTitle: 'All Articles',
+                getAllArticles: rows
+            });
+        })
+        .catch(err => console.log(err));
 }
