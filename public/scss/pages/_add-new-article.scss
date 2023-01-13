@@ -14,6 +14,7 @@
         "add-new-article__container-url"
         "add-new-article__container-content"
         "add-new-article__container-image"
+        "add-new-article__container-published"
         "add-new-article__container-submit";
     }
 
@@ -35,6 +36,10 @@
 
     &__container-image {
         grid-area: add-new-article__container-image;
+    }
+
+    &__container-published {
+        grid-area: add-new-article__container-published;
     }
 
     &__container-submit {

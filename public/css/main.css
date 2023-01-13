@@ -286,7 +286,7 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
-  grid-template-areas: "add-new-article__container-title" "add-new-article__container-description" "add-new-article__container-url" "add-new-article__container-content" "add-new-article__container-image" "add-new-article__container-submit"; }
+  grid-template-areas: "add-new-article__container-title" "add-new-article__container-description" "add-new-article__container-url" "add-new-article__container-content" "add-new-article__container-image" "add-new-article__container-published" "add-new-article__container-submit"; }
 
 .add-new-article__container-title {
   grid-area: add-new-article__container-title; }
@@ -302,6 +302,9 @@ html {
 
 .add-new-article__container-image {
   grid-area: add-new-article__container-image; }
+
+.add-new-article__container-published {
+  grid-area: add-new-article__container-published; }
 
 .add-new-article__container-submit {
   grid-area: add-new-article__container-submit; }

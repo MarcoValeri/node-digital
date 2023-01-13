@@ -22,7 +22,7 @@ module.exports = class Article {
 
     edit() {
         return db.execute(
-            'UPDATE articles SET title = ?, description = ?, url = ?, content = ?, imageUrl = ?, published = ?, updated = ?, WHERE id = ?',
+            'UPDATE articles SET title = ?, description = ?, url = ?, content = ?, imageUrl = ?, published = ?, updated = ? WHERE id = ?',
             [this.title, this.description, this.url, this.content, this.imageUrl, this.published, this.updated, this.id]
         );
     }

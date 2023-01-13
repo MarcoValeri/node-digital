@@ -4,6 +4,23 @@ const bodyParser = require('body-parser');
 const Article = require('../models/Article');
 const Image = require('../models/Image');
 
+/**
+ * Create a function that
+ * @return string current date
+ */
+const currentDate = () => {
+    const setDateNow = new Date();
+    const setYear = setDateNow.getFullYear();
+    const month = setDateNow.getMonth() + 1;
+    const setMonth = month < 10 ? `0${month}` : `${month}`;
+    const setDay = setDateNow.getDate();
+    const setHour = setDateNow.getHours();
+    const setMinutes = setDateNow.getMinutes();
+    const setSeconts = setDateNow.getSeconds();
+    const setUpdated = `${setYear}-${setMonth}-${setDay} ${setHour}:${setMinutes}:${setSeconts}`;
+    return setUpdated;
+}
+
 exports.adminDashboard = (req, res, next) => {
     res.render('./admin/dashboard', {
         pageTitle: 'Admin Dashboard'
@@ -35,8 +52,8 @@ exports.adminAddNewArticle = (req, res, next) => {
     const newArticleUrl = req.body.url;
     const newArticleContent = req.body.content;
     const newArticleImage = req.body.imageUrl;
-    const newPublished = null;
-    const newUpdated = null;
+    const newPublished = req.body.published;
+    const newUpdated = currentDate();
 
     // Save data into db
     const newArticle = new Article(null, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage, newPublished, newUpdated);
@@ -87,8 +104,12 @@ exports.adminEditArticle = (req, res, next) => {
     const newArticleUrl = req.body.url;
     const newArticleContent = req.body.content;
     const newArticleImage = req.body.imageUrl;
-    const newPublished = null;
-    const newUpdated = null;
+    const newPublished = req.body.published;
+    const newUpdated = currentDate();
+
+    const testDate = req.body.published;
+    console.log(`DATE: ${testDate}`);
+    console.log(typeof testDate);
 
     // Save data into db
     const editArticle = new Article(newArticleId, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage, newPublished, newUpdated);
