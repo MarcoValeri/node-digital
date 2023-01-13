@@ -1,8 +1,15 @@
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas:
     "main__content main__sidebar";
+
+    @include respond(xl) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "main__content"
+        "main__sidebar";
+    }
 
     &__content {
         grid-area: main__content;

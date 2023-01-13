@@ -12,21 +12,25 @@
             <div class="articles__container-articles">
                 <% for (let index = 0; index < getAllArticles.length; index++) { %>
                 <div class="card-preview-article">
-                    <div class="card-preview-article__container-image">
-                        <img class="card-preview-article__image" src="" alt="">
-                    </div>
-                    <div class="card-preview-article__container-data">
-                        <ul>
-                            <li>Published: 23/23/1984</li>
-                            <li>Update: 23/23/1984</li>
-                        </ul>
-                    </div>
-                    <div class="card-preview-article__container-title">
-                        <h2 class="card-preview-article__title"><%= getAllArticles[index].title %></h2>
-                    </div>
-                    <div class="card-preview-article__container-excerpt">
-                        <h4 class="card-preview-article__excerpt"></h4>
-                    </div>
+                    <a class="card-preview-article__wrapper" href="">
+                        <div class="card-preview-article__container-image">
+                            <img class="card-preview-article__image" src="/images/help.jpg" alt="">
+                        </div>
+                        <div class="card-preview-article__container-data">
+                            <ul class="card-preview-article__menu-data">
+                                <li class="card-preview-article__data body-5">Published: 23/23/1984</li>
+                                <li class="card-preview-article__data body-5">Updated: 23/23/1984</li>
+                            </ul>
+                        </div>
+                        <div class="card-preview-article__container-title">
+                            <h2 class="card-preview-article__title h3"><%= getAllArticles[index].title %></h2>
+                        </div>
+                        <div class="card-preview-article__container-excerpt">
+                            <p class="card-preview-article__excerpt body-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <% } %>
             </div>

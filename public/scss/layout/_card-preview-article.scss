@@ -1,3 +1,56 @@
 .card-preview-article {
-    border: 1px solid #00d;
+    width: 35rem;
+    border: 1px solid $grey;
+    margin: 2rem 1rem;
+
+    @include respond(md) {
+        width: 100%;
+    }
+
+    &__wrapper {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__container-image {
+        height: 20rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        @include respond(md) {
+            height: auto;
+            max-height: 30rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        transition: all .5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__container-data {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__menu-data {
+        list-style-type: none;
+    }
+
+    &__data {
+        margin-bottom: .5rem;
+    }
+
+    &__container-title {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__container-excerpt {
+        padding: 1rem;
+    }
 }

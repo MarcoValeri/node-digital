@@ -2,11 +2,22 @@
 
     &__container-title {
         text-align: center;
-        border: 1px solid #f00;
     }
 
     &__container-articles {
-        border: 1px solid #d00;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 5rem;
+
+        @include respond(lg) {
+            justify-content: center;
+        }
+
+        @include respond(md) {
+            padding: 1rem;
+        }
     }
 
 }
