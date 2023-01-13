@@ -35,9 +35,11 @@ exports.adminAddNewArticle = (req, res, next) => {
     const newArticleUrl = req.body.url;
     const newArticleContent = req.body.content;
     const newArticleImage = req.body.imageUrl;
+    const newPublished = null;
+    const newUpdated = null;
 
     // Save data into db
-    const newArticle = new Article(null, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage);
+    const newArticle = new Article(null, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage, newPublished, newUpdated);
     newArticle.save()
         .then(() => {
             res.redirect('/admin/dashboard');
@@ -85,9 +87,11 @@ exports.adminEditArticle = (req, res, next) => {
     const newArticleUrl = req.body.url;
     const newArticleContent = req.body.content;
     const newArticleImage = req.body.imageUrl;
+    const newPublished = null;
+    const newUpdated = null;
 
     // Save data into db
-    const editArticle = new Article(newArticleId, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage);
+    const editArticle = new Article(newArticleId, newArticleTitle, newArticleDescription, newArticleUrl, newArticleContent, newArticleImage, newPublished, newUpdated);
     editArticle.edit()
         .then(() => {
             res.redirect('/admin/articles');
@@ -135,9 +139,11 @@ exports.adminDeleteArticle = (req, res, next) => {
     const deleteArticleUrl = req.body.url;
     const deleteArticleContent = req.body.content;
     const deleteArticleImage = req.body.imageUrl;
+    const newPublished = null;
+    const newUpdated = null;
 
     // Delete data from db
-    const deleteArticle = new Article(deleteArticleId, deleteArticleTitle, deleteArticleDescription, deleteArticleUrl, deleteArticleContent, deleteArticleImage);
+    const deleteArticle = new Article(deleteArticleId, deleteArticleTitle, deleteArticleDescription, deleteArticleUrl, deleteArticleContent, deleteArticleImage, newPublished, newUpdated);
     deleteArticle.delete()
         .then(() => {
             res.redirect('/admin/articles');
